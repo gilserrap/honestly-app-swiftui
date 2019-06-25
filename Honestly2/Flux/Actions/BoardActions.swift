@@ -35,6 +35,15 @@ enum BoardActions: Action {
     struct NotifyMessageSent: Action {
         let message: Message
         let board: Board
+
+        init(message: Message, board: Board) {
+            self.message = message
+            self.board = board
+            MainDispatcher.shared.dispatch(action: BoardActions.GetBoards())
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                MainDispatcher.shared.dispatch(action: BoardActions.DismissMessageSent())
+            }
+        }
     }
 
     struct DismissMessageSent: Action {

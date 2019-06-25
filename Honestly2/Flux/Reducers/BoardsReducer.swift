@@ -11,10 +11,6 @@ struct BoardsReducer: Reducer {
             state.boards = action.boards
         case is BoardActions.NotifyMessageSent:
             state.showMessageSent = true
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
-                MainDispatcher.shared.dispatch(action: BoardActions.DismissMessageSent())
-            }
-            MainDispatcher.shared.dispatch(action: BoardActions.GetBoards())
         case is BoardActions.DismissMessageSent:
             state.showMessageSent = false
         default:

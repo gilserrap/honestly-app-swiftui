@@ -28,6 +28,8 @@
 		417EF6DD22BFCFAF00360DE1 /* BoardsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417EF6DC22BFCFAF00360DE1 /* BoardsState.swift */; };
 		417EF6DF22BFD22900360DE1 /* BoardsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417EF6DE22BFD22900360DE1 /* BoardsReducer.swift */; };
 		417EF6E122BFD2A400360DE1 /* BoardActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 417EF6E022BFD2A400360DE1 /* BoardActions.swift */; };
+		418ACAF722C2AEBF007F761A /* MockState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418ACAF622C2AEBF007F761A /* MockState.swift */; };
+		418ACAF922C2B0D9007F761A /* mockState.json in Resources */ = {isa = PBXBuildFile; fileRef = 418ACAF822C2B0D9007F761A /* mockState.json */; };
 		41B4502722C1509F001D7941 /* URLRequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4502622C1509F001D7941 /* URLRequestBuilder.swift */; };
 		41B4502922C15339001D7941 /* ObserveAPIServicePublisher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4502822C15339001D7941 /* ObserveAPIServicePublisher.swift */; };
 		41B4502B22C1546A001D7941 /* BoardObserverActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4502A22C1546A001D7941 /* BoardObserverActions.swift */; };
@@ -73,6 +75,8 @@
 		417EF6DC22BFCFAF00360DE1 /* BoardsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsState.swift; sourceTree = "<group>"; };
 		417EF6DE22BFD22900360DE1 /* BoardsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardsReducer.swift; sourceTree = "<group>"; };
 		417EF6E022BFD2A400360DE1 /* BoardActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardActions.swift; sourceTree = "<group>"; };
+		418ACAF622C2AEBF007F761A /* MockState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockState.swift; sourceTree = "<group>"; };
+		418ACAF822C2B0D9007F761A /* mockState.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mockState.json; sourceTree = "<group>"; };
 		41B4502622C1509F001D7941 /* URLRequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLRequestBuilder.swift; sourceTree = "<group>"; };
 		41B4502822C15339001D7941 /* ObserveAPIServicePublisher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserveAPIServicePublisher.swift; sourceTree = "<group>"; };
 		41B4502A22C1546A001D7941 /* BoardObserverActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoardObserverActions.swift; sourceTree = "<group>"; };
@@ -173,6 +177,7 @@
 		417EF6C122BFCF2900360DE1 /* State */ = {
 			isa = PBXGroup;
 			children = (
+				418ACAF522C2AEA6007F761A /* Mock */,
 				417EF6C222BFCF2900360DE1 /* FluxState.swift */,
 				417EF6C322BFCF2900360DE1 /* MainDispatcher.swift */,
 				417EF6DC22BFCFAF00360DE1 /* BoardsState.swift */,
@@ -240,6 +245,15 @@
 				41B4503222C17643001D7941 /* CodableSerialization.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		418ACAF522C2AEA6007F761A /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				418ACAF622C2AEBF007F761A /* MockState.swift */,
+				418ACAF822C2B0D9007F761A /* mockState.json */,
+			);
+			path = Mock;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -324,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4176483422BE3CCD00B06A6F /* LaunchScreen.storyboard in Resources */,
+				418ACAF922C2B0D9007F761A /* mockState.json in Resources */,
 				4176483122BE3CCD00B06A6F /* Preview Assets.xcassets in Resources */,
 				4176482E22BE3CCD00B06A6F /* Assets.xcassets in Resources */,
 			);
@@ -357,6 +372,7 @@
 				41B4502722C1509F001D7941 /* URLRequestBuilder.swift in Sources */,
 				417EF6D922BFCF5B00360DE1 /* BoardListRow.swift in Sources */,
 				417EF6CD22BFCF2900360DE1 /* Action.swift in Sources */,
+				418ACAF722C2AEBF007F761A /* MockState.swift in Sources */,
 				417EF6B522BFCCE200360DE1 /* AppDelegate.swift in Sources */,
 				417EF6B622BFCCE200360DE1 /* SceneDelegate.swift in Sources */,
 				411158D422C11FC20096EC32 /* BoardsObserversState.swift in Sources */,

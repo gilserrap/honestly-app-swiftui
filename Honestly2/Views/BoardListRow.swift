@@ -17,11 +17,13 @@ struct BoardListRow : View {
     var titleText: some View {
         Text(board.title)
             .font(.title)
+            .foregroundColor(Color.white)
     }
 
     var descriptionText: some View {
         Text(board.description)
             .font(.body)
+            .foregroundColor(Color.white)
             .multilineTextAlignment(.leading)
             .lineLimit(Int.max)
     }
@@ -29,16 +31,14 @@ struct BoardListRow : View {
     var body: some View {
         ZStack {
             cardRectangle
-            VStack(alignment: .leading) {
-                HStack {
-                    VStack(alignment: .leading) {
-                        titleText
-                        descriptionText
-                    }.foregroundColor(Color.white)
+            HStack {
+                VStack(alignment: .leading) {
+                    titleText
+                    descriptionText
                     Spacer()
-                }
+                }.padding(.all, 14)
                 Spacer()
-            }.padding(.all, 10)
+            }
         }.padding([.leading, .trailing])
          .frame(width: UIScreen.main.bounds.width, height: 300)
 

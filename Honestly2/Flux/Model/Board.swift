@@ -1,7 +1,6 @@
 import SwiftUI
 
-struct Board: Identifiable, Codable {
-    var id = UUID()
+struct Board: Codable {
     let name: String
     let keywords: [Keyword]
 }

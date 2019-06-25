@@ -7,7 +7,7 @@ struct BoardList : View {
     var boardsList: some View {
         ScrollView {
             VStack(alignment: .center) {
-                ForEach(store.state.boardsState.boards) { board in
+                ForEach(store.state.boardsState.boards.identified(by: \.name)) { board in
                     NavigationButton(destination: BoardDetail(board: board).environmentObject(self.store), isDetail: true) {
                         BoardListRow(board: BoardListRow.Model.adapt(from: board))
                     }
@@ -46,7 +46,7 @@ struct BoardList : View {
 #if DEBUG
 struct ContentView_Previews : PreviewProvider {
     static var previews: some View {
-        BoardList().environmentObject(MainDispatcher())
+        BoardList().environmentObject(MainDispatcher(state: mockState))
     }
 }
 #endif
